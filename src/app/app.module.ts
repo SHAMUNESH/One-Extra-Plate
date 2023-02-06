@@ -1,57 +1,48 @@
-// import { NgModule } from '@angular/core';
-// import { BrowserModule } from '@angular/platform-browser';
-
-// import { AppRoutingModule } from './app-routing.module';
-// import { AppComponent } from './app.component';
-// import { AboutComponent } from './about/about.component';
-// import { SpotlightComponent } from './spotlight/spotlight.component';
-
-// @NgModule({
-//   declarations: [
-//     AppComponent,
-//     AboutComponent,
-//     SpotlightComponent
-//   ],
-//   imports: [
-//     BrowserModule,
-//     AppRoutingModule
-//   ],
-//   providers: [],
-//   bootstrap: [AppComponent]
-// })
-// export class AppModule { }
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { routes } from './app.router';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
-import { SpotlightComponent } from './spotlight/spotlight.component';
-import { ContactComponent } from './contact/contact.component';
-import { HomeComponent } from './home/home.component';
-import { ServicesComponent } from './services/services.component';
-import { DonateComponent } from './donate/donate.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
+import {MatBadgeModule} from '@angular/material/badge';
 import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
-declarations: [
-AppComponent,
-AboutComponent,
-SpotlightComponent,
-ContactComponent,
-HomeComponent,
-ServicesComponent,
-DonateComponent
-],
-imports: [
-BrowserModule,
-FormsModule,
-HttpClientModule,
-routes
-],
-providers: [],
-bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    SignupComponent,
+    DashboardComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatButtonModule,
+    MatBadgeModule,
+    HttpClientModule
+
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
-

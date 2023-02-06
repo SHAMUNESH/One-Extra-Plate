@@ -1,0 +1,34 @@
+<div style="margin: 20px;" class="container pt-3">
+
+    <div>
+        <mat-card>
+            <mat-card-title>
+                Login | Food Donation
+            </mat-card-title><br>
+            <mat-card-content>
+                <form (ngSubmit) = "OnSubmit()" [formGroup] = "loginUserForm">
+                    <div class="row">
+                        <div class="col">
+                            <mat-form-field appearance="outline" style="width: 100%;">
+                                <mat-label>Email</mat-label>
+                                <input matInput formControlName="email">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <mat-form-field appearance="outline" style="width: 100%;">
+                                <mat-label>Password</mat-label>
+                                <input matInput type="password" formControlName="password">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button mat-raised-button color="primary" style="width: 100%;" type="submit">Submit</button>
+                    </div>
+                </form>
+               
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

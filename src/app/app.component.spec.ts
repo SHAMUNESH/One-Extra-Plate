@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'one-extra-plate'`, () => {
+  it(`should have as title 'aug-auth'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('one-extra-plate');
+    expect(app.title).toEqual('aug-auth');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('one-extra-plate app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('aug-auth app is running!');
   });
 });
